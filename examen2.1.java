@@ -49,7 +49,7 @@ public class examen21
 		}
 		return buffer;
 	}
-	pblic static void error()
+	public static void error()
 	{
 		System.out.println("Valor introducido erroneo");
 	}
