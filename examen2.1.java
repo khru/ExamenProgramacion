@@ -11,8 +11,14 @@ public class examen21
 		int num;
 		System.out.println("Introduce un número a representar: ");
 		num = teclado.nextInt();
-		System.out.println(obtenerBarraHorizontalEVR(num));
-
+		if((num > 10) || (num < -10))
+		{
+			error();	
+		}
+		else
+		{
+			System.out.println(obtenerBarraHorizontalEVR(num));
+		}
 	}
 	public static String obtenerBarraHorizontalEVR(int num)
 	{
@@ -42,6 +48,10 @@ public class examen21
 			buffer += c;
 		}
 		return buffer;
+	}
+	pblic static void error()
+	{
+		System.out.println("Valor introducido erroneo");
 	}
 
 }
