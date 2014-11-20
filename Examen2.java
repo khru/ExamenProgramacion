@@ -49,10 +49,6 @@ public class examen2 {
             for(int i = 0;i > num;i--)
             {
                 linea += "*";
-                if (i + num == 0)
-                {
-                    linea += "|";
-                }
             }
         }
         else if(num > 0)
