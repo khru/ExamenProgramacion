@@ -52,7 +52,7 @@ public class Arbol{
    {
 	   String buffer = "";
 	   num = ((num * 2) /2); //operación matematica para centrar el tronco
-	   for(int i = 0;i <= num;i++)// hay que ir desde el principio del árbol al final
+	   for(int i = 1;i <= num;i++)// hay que ir desde el principio del árbol al final
 	   {
 		   if (i != num)// mientras no sea el número introducido o constante se realizará las siguiente operaciones
 		   {
