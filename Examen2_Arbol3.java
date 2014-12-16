@@ -54,42 +54,35 @@ public class Arbol
 	}
 	
 	/**
+	 * Este método realiza la copa
 	 * @parm num, es el número que entra por teclado
 	 * @return buffer, es el String que contiene la información formateada
 	 */
 	static String copa(int num)
 	{
+		int i;
 		String buffer = "";
-		for(int i = 1;i <= num;i++)
+		for(i = 1;i <= num;i++)
 		{
-			if(i != num)
 			buffer += bloqueCaracter(num - i, ' ')+ bloqueCaracter(1, '/') + bloqueCaracter(((i * 2)-2),' ') + bloqueCaracter(1,'\\') + bloqueCaracter(1, '\r');
-			else
-			{
-				buffer += bloqueCaracter(num - i, ' ')+ bloqueCaracter(1, '/') + bloqueCaracter(((i * 2)-2),'_') + bloqueCaracter(1,'\\') + bloqueCaracter(1, '\r');
-			}
 		}
+		buffer += bloqueCaracter(num - i, ' ')+ bloqueCaracter(1, '/') + bloqueCaracter(((i * 2)-2),'_') + bloqueCaracter(1,'\\') + bloqueCaracter(1, '\r');
 		return buffer;
 	}
 	/**
-	 * 
+	 * Este método realiza el tronco
 	 * @param num, parametro númerico que entra al método para calcular el tamaño del tronco
 	 * @return buffer
 	 */
 	static String tronco(int num)
 	{
+		int i;
 		String buffer = ""; 
-		for(int i = 0;i <= num ;i++)
+		for(i = 0;i <= (num - 1);i++)
 		{
-			if(i != num)
-			{
-				buffer += bloqueCaracter((num -2) , ' ') + bloqueCaracter(1, '|') + bloqueCaracter(2, ' ') + bloqueCaracter(1, '|') + bloqueCaracter(1, '\n');
-			}
-			else
-			{
-				buffer += bloqueCaracter((num -2) , ' ') + bloqueCaracter(1, '|') + bloqueCaracter(2, '_') + bloqueCaracter(1, '|') + bloqueCaracter(1, '\n');
-			}
+			buffer += bloqueCaracter((num -2) , ' ') + bloqueCaracter(1, '|') + bloqueCaracter(2, ' ') + bloqueCaracter(1, '|') + bloqueCaracter(1, '\n');
 		}
+		buffer += bloqueCaracter((num -2) , ' ') + bloqueCaracter(1, '|') + bloqueCaracter(2, '_') + bloqueCaracter(1, '|') + bloqueCaracter(1, '\n');
 		return buffer;
 	}
 }
