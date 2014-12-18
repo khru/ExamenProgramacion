@@ -16,7 +16,7 @@ public class PrincipalEVR
 	public static void main(String[] args) 
 	{
 		// Creación de patron
-		int p[] = {1,0,1,0,0,1,1};
+		int p[] = {1,1,0,0,0,1,1};
 		cargarUsuariosPatronEVR(p);
 		mostrarUsuarios();
 	}
